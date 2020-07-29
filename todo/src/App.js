@@ -1,13 +1,10 @@
-import { React, useState, useReducer } from 'react';
+import  React, { useState, useReducer } from 'react';
 import './App.css';
 import TodoList from './TodoList'
 import TodoForm from './TodoForm';
 
 import { initialTodoState, todoReducer } from "./reducer"
 
-export const ADD_TODO = "ADD_TODO"
-export const TOGGLE_TODO = "TOGGLE_TODO"
-export const CLEAR_TODO = "CLEAR_TODO"
 
 function App() {
   
@@ -34,19 +31,20 @@ function App() {
     }
 
     return (
-    <div className="TodoList">
-      <h1>hello</h1>
-      <TodoForm
-      onSubmit={onSubmit}
-      clearCompleted={clearCompleted}
-      handleChanges={handleChanges}
-      state={state}
-      />
-      <TodoList
-        state={state}
-        toggleTodo={toggleTodo}
-      />
+      <div className="TodoList">
+        <h1>hello</h1>
+        <TodoForm
+          onSubmit={onSubmit}
+          clearCompleted={clearCompleted}
+          handleChanges={handleChanges}
+          state={state}
+        />
+        <TodoList
+          state={state}
+          toggleTodo={toggleTodo}
+        />
     </div>
   );
 }
+
 export default App;

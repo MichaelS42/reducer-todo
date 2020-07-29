@@ -9,11 +9,11 @@ const TodoForm = props => {
         <input type="search"
             value={props.taskInput}
           name="taskInput"
-          onChange={props.inputChange}
+          onChange={props.handleChanges}
          placeholder={"add new item"}
         />
 
-          <button onClick={event => {props.taskSubmit(event)}}> Add todo</button>
+          <button onClick={event => {props.onSubmit(event)}}> Add todo</button>
           <button onClick={event => {props.clearCompleted(event)}}> clear</button>
 
         </form>

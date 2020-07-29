@@ -8,8 +8,9 @@ const TodoList = props => {
                 return (
                     <div
                     key={todos.id}
-                    onClick={() => { props.toggleItem(todos.id) }}
+                    onClick={() => props.toggleTodo(todos.id) }
                     className={`todos${todos.finished ? "finished" : ""}`}>
+                    <p>{todos.item}</p>
                 </div>)
             }
             )}
@@ -17,4 +18,4 @@ const TodoList = props => {
     )
 
         }
-export default TodoList
+export default TodoList;
